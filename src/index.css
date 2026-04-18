@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-fixed: rgba(59, 130, 246, 0.15);
+  --color-on-primary-fixed-variant: #60a5fa;
+  --color-surface: #0f172a;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #94a3b8;
+  --color-surface-container-low: rgba(255, 255, 255, 0.03);
+  --color-surface-container-lowest: rgba(255, 255, 255, 0.02);
+  --color-surface-container-high: rgba(255, 255, 255, 0.08);
+  --color-surface-variant: rgba(255, 255, 255, 0.05);
+  --color-error: #ef4444;
+  --color-error-container: rgba(239, 68, 68, 0.1);
+  --color-on-error-container: #f87171;
+  --color-tertiary: #f59e0b;
+  --color-tertiary-fixed: rgba(245, 158, 11, 0.15);
+  --color-on-tertiary-fixed-variant: #fbbf24;
+  
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-headline: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-on-surface font-sans antialiased min-h-screen;
+    background: 
+                radial-gradient(circle at 10% 20%, rgba(91, 33, 182, 0.2) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(30, 64, 175, 0.2) 0%, transparent 40%),
+                #0f172a;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+  
+  .glass-inner {
+    @apply bg-black/20 border border-white/5 rounded-xl;
+  }
+  
+  .tonal-layering {
+    @apply bg-white/3 backdrop-blur-lg;
+  }
+}
